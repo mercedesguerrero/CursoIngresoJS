@@ -15,12 +15,19 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-	
+	numeroSecreto= document.getElementById('numeroSecreto').value;
+	var miRandom=Math.floor((Math.random() * 100) + 1);
+
+	alert(miRandom);
 
 }
 
 function verificar()
 {
-	
+	var numero;
+	numero= document.getElementById('numero').value;
+	contadorIntentos= document.getElementById('intentos').value;
+
+	if numero
 	
 }
