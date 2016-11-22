@@ -33,26 +33,25 @@ function verificar()
 	//contadorIntentos+=1;
 	contadorIntentos++;
 	document.getElementById('intentos').value= contadorIntentos;
+	//siempre abajo del contador para que primero cuente y después me lo muestre
 
 	if (numero== numeroSecreto) 
 	{
 		alert("Usted es un ganador!!! y en solo "+contadorIntentos+" intentos");
 	}
-		else
+	else
+	{
+
+		if (numero< numeroSecreto)
 		{
-
-			if (numero< numeroSecreto)
-			{
-			alert("Falta...");
-
-			}
-
-			else	
-			{
-			alert("Se pasó...");
-
-			}
+		alert("Falta...");
 		}
+
+		else	
+		{
+		alert("Se pasó...");
+		}
+	}
 
 	
 }
