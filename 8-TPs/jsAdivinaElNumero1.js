@@ -43,13 +43,13 @@ function verificar()
 
 			if (numero< numeroSecreto)
 			{
-			alert("Falta...")
+			alert("Falta...");
 
 			}
 
 			else	
 			{
-			alert("Se pasó...")
+			alert("Se pasó...");
 
 			}
 		}
