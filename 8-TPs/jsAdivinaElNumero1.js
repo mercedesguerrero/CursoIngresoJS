@@ -15,36 +15,44 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
+	contadorIntentos=0;	
 
-	miRandom= document.getElementById('FormIngreso').value;
-	var numeroSecreto=Math.floor((Math.random() * 100) + 1);
+	numeroSecreto=Math.floor((Math.random() * 100) + 1);
+
+	alert(+numeroSecreto);
 
 }
 
 function verificar()
 {
-	
 	var numero;
 	numero= document.getElementById('numero').value;
-	contadorIntentos= 0;
 
-	if numero= numeroSecreto 
+	//hay 3 maneras...
+	//contadorIntentos= contadorIntentos+1;
+	//contadorIntentos+=1;
+	contadorIntentos++;
+	document.getElementById('intentos').value= contadorIntentos;
+
+	if (numero== numeroSecreto) 
 	{
-		contadorIntentos=contadorIntentos+1;
-		alert("Usted es un ganador!!! y en solo "+contadorIntentos" intentos");
+		alert("Usted es un ganador!!! y en solo "+contadorIntentos+" intentos");
 	}
+		else
+		{
 
-	if numero< numeroSecreto
-	{
-		contadorIntentos=contadorIntentos+1;
-		alert("Falta...")
+			if (numero< numeroSecreto)
+			{
+			alert("Falta...")
 
-	}
+			}
 
-	else	
-	{
-		contadorIntentos=contadorIntentos+1;
-		alert("Se pasó...")
+			else	
+			{
+			alert("Se pasó...")
 
-	}
+			}
+		}
+
+	
 }
