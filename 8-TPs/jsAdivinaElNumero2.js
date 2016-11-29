@@ -117,7 +117,8 @@ function verificar()
 			case 7:
 			case 8:
 			case 9:
-			case 10:
+			case 10
+			:
 				alert("Falta técnica");
 	
 		}
