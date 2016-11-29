@@ -35,6 +35,7 @@ function verificar()
 	contadorIntentos++;
 	document.getElementById('intentos').value= contadorIntentos;
 
+/*
 	if (numero== numeroSecreto) 
 	{
 	alert("Ganaste!");
@@ -84,6 +85,60 @@ function verificar()
 			}
 		}
 
+*/
+
 	
+
+	if (numero==numeroSecreto) 
+	{
+		alert("Ganaste!");
+	
+	switch (contadorIntentos) 
+		{
+		default:
+		alert("Afortunado en el amor <3 !!");
+		break;
+			case 1: 
+			alert("Usted es un psíquico");
+		break;
+			case 2:
+			alert("Excelente percepción");
+		break;
+			case 3:
+			alert("Esto es suerte");
+		break;
+			case 4:
+		alert("Excelente técnica");
+		break;
+			case 5:
+		alert("Usted está en la media");
+		break;
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+				alert("Falta técnica");
+	
+		}
+
+	}	
+
+	else
+	{
+
+		if (numero< numeroSecreto)
+		{
+		alert("Falta...");
+
+		}
+
+		else	
+		{
+		alert("Se pasó...");
+
+		}
+
+	}
 
 }

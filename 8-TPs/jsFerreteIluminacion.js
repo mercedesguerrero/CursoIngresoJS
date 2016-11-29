@@ -19,7 +19,7 @@ function CalcularPrecio ()
  	CantidadLamparas= document.getElementById('Cantidad').value;
  	marca= document.getElementById('Marca').value;
  	precioBruto= CantidadLamparas*35;
-
+/*
  	if(CantidadLamparas>5)
  	{
  		precioFinal= precioBruto*0.5;
@@ -64,14 +64,67 @@ function CalcularPrecio ()
  			}
  		}
  	}
- 	if(precioFinal>120)
+ 	*/
+
+ 
+switch (CantidadLamparas) {
+	default:
+   	
+ 		precioFinal= precioBruto*0.5;
+ 	
+        break;
+
+    case "5":
+ 	
+ 		if(marca=="ArgentinaLuz")
+ 		{
+ 			precioFinal= precioBruto*0.6;
+ 		}
+ 		else
+ 		{
+ 			precioFinal= precioBruto*0.7;
+ 		}
+ 	
+ 	case "4":
+ 	
+ 		if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+ 		{
+ 			precioFinal= precioBruto*0.75;
+ 		}
+ 		else
+ 		{
+ 			precioFinal= precioBruto*0.8;
+ 		}
+ 	
+ 	case "3":
+ 	
+ 		if(marca=="ArgentinaLuz")
+ 		{
+ 			precioFinal= precioBruto*0.85;
+ 		}
+ 		else
+ 		{
+ 			if(marca=="FelipeLamparas")
+ 			{
+ 			precioFinal= precioBruto*0.9;
+ 			}
+ 			else
+ 			{
+ 			precioFinal= precioBruto*0.95;
+ 			}
+ 		}
+ 	
+ 	}
+
+document.getElementById('precioDescuento').value=precioFinal+" Pesos.";
+
+	if(precioFinal>120)
  	{
  		var impuesto=precioFinal*0.1;
  		precioFinal=precioFinal*1.1;
- 		alert("Usted pagó "+ impuesto +"de IIBB")
+ 		alert("Usted pagó "+ impuesto +"de IIBB");
  	}
 
- 	
- 	document.getElementById('precioDescuento').value=precioFinal+" Pesos.";
- 
-}
+
+
+} //FIN DE LA FUNCIÓN
