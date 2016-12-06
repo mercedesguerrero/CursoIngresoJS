@@ -18,9 +18,18 @@ function Mostrar()
 
 		if(numeroIngresado<0)
 		{
-			negativo= numeroIngresado++numeroIngresado;
+			negativo= numeroIngresado+numeroIngresado;
 			document.write("La suma de los números negativos ingresados es: "+negativo+"<br>");
 		}
+		else
+		{
+			positivo= numeroIngresado+numeroIngresado;
+			document.write("La suma de los números positivos ingresados es: "+positivo+"<br>");
+		}
+
+
+
+	respuesta= prompt("Ingrese no para salir");	
 	
 	}
 
