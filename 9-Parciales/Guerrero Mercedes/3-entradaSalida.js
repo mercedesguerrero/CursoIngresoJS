@@ -10,7 +10,7 @@ function Mostrar()
 	var perimetro = (parseInt(largo))*2+parseInt(parseInt(ancho))*2;
 	var rectangulo = (perimetro)*6 //son 6 vueltas de alambre
 
-	alert("La cantidad de alambre es: "+rectangulo);
+	alert("La cantidad de alambre es: "+rectangulo+" metros.");
 	
 }
 

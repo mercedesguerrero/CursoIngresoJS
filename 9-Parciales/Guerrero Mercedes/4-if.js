@@ -10,23 +10,26 @@ function Mostrar()
 	numeroUno=prompt("Ingrese número");
 	numeroDos=prompt("Ingrese número");
 
-	if (numeroUno==numeroDos)
+	numeroUno=parseInt(numeroUno);
+	numeroDos=parseInt(numeroDos);
+
+	if(numeroUno==numeroDos)
 	{
 		multip=numeroUno*numeroDos;
 		document.write("<br>Resultado de los números multiplicados: "+multip);
 	}
 
-	if (numeroUno>numeroDos)
+	if(numeroUno>numeroDos)
 	{
 		resta=parseInt(numeroUno)-parseInt(numeroDos);
 		document.write("<br>Resultado de restar los números: "+resta);
 	}
 
-	else
+	if(numeroUno<numeroDos)
 	{
 		suma=parseInt(numeroUno)+parseInt(numeroDos);
 		document.write("<br>Resultado de sumar los números: "+suma);
 	}
-	
+
 }
 
