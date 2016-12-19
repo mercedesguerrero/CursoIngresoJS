@@ -127,7 +127,45 @@ function Ejercicio_5 ()
 
 function Ejercicio_6 ()
 {
+	//Pulsar botón iniciar
+	var numeroIngresado;
 
+	var minimo;
+	var maximo;
+
+	for(contador=0;contador<24;contador++)
+	{
+
+		numeroIngresado=prompt("Ingrese número");
+		numeroIngresado=parseInt(numeroIngresado);
+	
+		while(numeroIngresado<0)	
+		{
+			numeroIngresado=prompt("Re-Ingrese número");
+			numeroIngresado=parseInt(numeroIngresado);
+		}
+		if(contador==0)
+		{
+			maximo= numeroIngresado;
+			minimo= numeroIngresado;
+		}
+
+		else
+		{
+			if(numeroIngresado>maximo)
+			{
+				maximo= numeroIngresado;
+			}
+			if(numeroIngresado<minimo)
+			{
+				minimo=numeroIngresado;
+			}
+		}
+
+	}//fin del for
+
+	console.log("Mayor importe de venta: "+ maximo);
+	console.log("Menor importe de venta: "+ minimo);
 
 }
 
