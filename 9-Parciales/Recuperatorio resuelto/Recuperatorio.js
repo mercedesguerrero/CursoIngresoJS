@@ -14,6 +14,9 @@ function Iniciar ()
 		case 4:
 			Ejercicio_4();
 			break;
+		case 8:
+			Ejercicio_8();
+			break;
 		default:
 			alert("Te olvidaste de cargar ese ejercicio en el switch")
 	}	
@@ -22,11 +25,40 @@ function Ejercicio_1 () //Ingresar la base primero y después presionar iniciar
 {
 	alert("Ej 1");
 }
+
 function Ejercicio_2 () 
 {
 	alert("Ej 2");
 }
+
 function Ejercicio_4 ()
+{
+	//Presionar iniciar
+	var numero1;
+	var numero2;
+	var resultado;
+
+	numero1=prompt("Ingrese número");
+	numero2=prompt("Ingrese número");
+
+	resultado=parseInt(numero1)+parseInt(numero2);
+
+	if(resultado>0)
+	{
+		document.write("<br>La suma de los números da un número positivo");
+	}
+
+	if(resultado<0)
+	{
+		document.write("<br>La suma de los números da un número negativo");
+	}
+	if(resultado==0)
+	{
+		document.write("<br>La suma de los números da cero");
+	}
+}
+
+function Ejercicio_8 ()
 {
 	var numeroIngresado;
 	var respuesta;
