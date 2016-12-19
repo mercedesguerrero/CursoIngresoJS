@@ -23,6 +23,12 @@ function Iniciar ()
 		case 6:
 			Ejercicio_6();
 			break;
+		case 7:
+			Ejercicio_7();
+			break;
+		case 8:
+			Ejercicio_8();
+			break;
 		default:
 			alert("Te olvidaste de cargar ese ejercicio en el switch")
 	}	
@@ -166,6 +172,120 @@ function Ejercicio_6 ()
 
 	console.log("Mayor importe de venta: "+ maximo);
 	console.log("Menor importe de venta: "+ minimo);
+}
+
+function Ejercicio_7 ()
+{
+	//Pulsar botón iniciar
+	var notaIngresada;
+	var sexo;
+
+	var acumulador=0;
+	var minimo;
+	var contadorVarones=0;
+
+	for(contador=0;contador<5;contador++)
+	{
+		notaIngresada=prompt("Ingrese nota");
+		notaIngresada=parseInt(notaIngresada);
+
+		while(notaIngresada<0 && notaIngresada>10)
+		{
+			notaIngresada= prompt("Re-ingrese nota");
+		}
+
+		sexo=prompt("Ingrese f ó m");
+
+		while(sexo!="f" && sexo!="m")
+		{
+			sexo= prompt("Re-ingrese sexo");
+		}
+
+		acumulador= notaIngresada+acumulador;
+
+	if(contador==0)
+		{
+			minimo= notaIngresada;
+		}
+		
+	else
+		{
+			if(notaIngresada<minimo)
+			{
+			minimo=notaIngresada;
+			}
+		}
+
+	if(sexo=="m" && notaIngresada>5)
+	{
+		contadorVarones++;
+	}
+
+	}//FIN DEL for
+
+	alert("El promedio de las notas totales es: "+acumulador/contador);
+	alert("La nota más baja es: "+minimo);
+	alert("Cantidad de varones que su nota haya sido mayor o igual a 6: "+contadorVarones);
+
+}
+
+function Ejercicio_8 ()
+{
+	//Pulsar botón iniciar
+	var numeroIngresado;
+	var respuesta;
+	var acumulador=0;
+	var contadorPares=0;
+	var minimo;
+	var maximo;
+
+	for(contador=0; ;contador++)
+	{
+		numeroIngresado=prompt("Ingrese número positivo");
+		numeroIngresado=parseInt(numeroIngresado);
+		acumulador=acumulador+parseInt(numeroIngresado);
+
+		while (numeroIngresado<0)
+		{
+			numeroIngresado=prompt("Re-ingrese número positivo");
+			numeroIngresado=parseInt(numeroIngresado);
+		}
+		if(numeroIngresado%2==0)
+		{
+			contadorPares++;
+		}
+
+		if(contador==0)
+		{
+			maximo= numeroIngresado;
+			minimo= numeroIngresado;
+		}
+		else
+		{
+			if(numeroIngresado>maximo)
+			{
+				maximo= numeroIngresado;
+			}
+			if(numeroIngresado<minimo)
+			{
+				minimo=numeroIngresado;
+			}
+		}
+		respuesta=prompt("Presione Aceptar para continuar o ingrese N para finalizar");
+		if(respuesta=="N")
+		{
+			break;
+		}
+		contador++;
+	
+
+	}//Fin del for
+
+	document.write("<br>Cantidad de números pares: "+contadorPares);
+	document.write("<br>Promedio de todos los números ingresados: "+acumulador/contador);
+	document.write("<br>Suma de todos los números ingresados: "+acumulador);
+	document.write("<br>Número máximo ingresado: "+maximo);
+	document.write("<br>Número mínimo ingresado: "+minimo);
 
 }
 
